@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  mongo:
+    build: ./db
+    networks:
+      - appNetwork
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./db/mongodb:/var/lib/mongodb
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - MONGODB_DATABASE=initdb
+  appservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - appNetwork
+    ports:
+      - "3000:3000"
+networks:
+  appNetwork:
+    external: false

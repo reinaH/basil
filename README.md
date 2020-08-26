@@ -7,16 +7,19 @@ This project contains an example of a basic Todo list. Look at the `index.js` fi
 
 ## Running the Project.
 
-Once running, the app is reachable via `localhost:3000`.
+Once running, the app is reachable via `localhost:3000` and the admin portal via `localhost:3000/admin`.
 
 
 ## Scripts
 
+- `npm test` : runs the test runner. if `init` has not yet run or if container definition has changed, this runs the `init` step.
+
+The following are run with `npm run-script` as it is not recommended to override `npm init` and `npm run`.
+
 - `npm run-script init` : builds containers/ connects web container to database container. takes care of any db set up.
 
-- `npm run` : starts up web server. if `init` has not yet run or if container definition has changed, this runs the `init` step.
+- `npm run-script run` : starts up web server. if `init` has not yet run or if container definition has changed, this runs the `init` step.
 
-- `npm test` : runs the test runner. if `init` has not yet run or if container definition has changed, this runs the `init` step.
 
 
 ## GitHub Actions
