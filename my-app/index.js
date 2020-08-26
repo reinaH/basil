@@ -14,7 +14,7 @@ const adapterConfig = { mongoUri: "mongodb://mongo:27017" };
 
 const keystone = new Keystone({
   adapter: new Adapter(adapterConfig),
-  cookieSecret: process.env.NODE_ENV === "test",
+  cookieSecret: "ImG2PbQVMXdmuLat6S9u",
   sessionStore: new MongoStore({ url: "mongodb://mongo:27017" }),
 });
 
