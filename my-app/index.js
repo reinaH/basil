@@ -33,4 +33,3 @@ module.exports = {
     new AdminUIApp({ name: PROJECT_NAME, enableDefaultRoute: true }),
   ],
 };
-
